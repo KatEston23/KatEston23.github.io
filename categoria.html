@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoría | StyleHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>StyleHub</h1>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#coleccion">Colección</a></li>
+                    <li><a href="index.html#categorias">Categorías</a></li>
+                    <li><a href="index.html#ofertas">Ofertas</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="#buscar"><i class="fas fa-search"></i></a>
+                    <a href="#carrito"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="#usuario"><i class="fas fa-user"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main style="display:flex; gap:2rem; max-width:1200px; margin:6rem auto 2rem auto;">
+        <aside style="min-width:220px; max-width:300px;">
+            <h2>Filtrar</h2>
+            <form id="filtros-categoria" style="display:flex; flex-direction:column; gap:1.5rem;">
+                <div>
+                    <label for="precio-min">Precio mínimo</label>
+                    <input type="number" id="precio-min" name="precio-min" placeholder="0" min="0" style="width:100%; padding:0.5rem;">
+                </div>
+                <div>
+                    <label for="precio-max">Precio máximo</label>
+                    <input type="number" id="precio-max" name="precio-max" placeholder="1000" min="0" style="width:100%; padding:0.5rem;">
+                </div>
+                <div>
+                    <label for="color">Color</label>
+                    <select id="color" name="color" style="width:100%; padding:0.5rem;">
+                        <option value="">Todos</option>
+                        <option value="rojo">Rojo</option>
+                        <option value="azul">Azul</option>
+                        <option value="negro">Negro</option>
+                        <option value="blanco">Blanco</option>
+                        <!-- Agrega más colores según tu catálogo -->
+                    </select>
+                </div>
+                <div>
+                    <label for="talla">Talla</label>
+                    <select id="talla" name="talla" style="width:100%; padding:0.5rem;">
+                        <option value="">Todas</option>
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <!-- Agrega más tallas según tu catálogo -->
+                    </select>
+                </div>
+                <button type="submit" style="padding:0.7rem 1rem; background:#2c3e50; color:#fff; border:none; border-radius:6px;">Aplicar filtros</button>
+            </form>
+        </aside>
+        <section style="flex:1;">
+            <h2 id="titulo-categoria">Productos</h2>
+            <div id="productos-categoria" class="products-grid">
+                <!-- Aquí se mostrarán los productos filtrados de la categoría seleccionada -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>StyleHub</h3>
+                <p>Tu destino de moda online</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#coleccion">Colección</a></li>
+                    <li><a href="index.html#categorias">Categorías</a></li>
+                    <li><a href="index.html#ofertas">Ofertas</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Ayuda</h3>
+                <ul>
+                    <li><a href="#">Envíos</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 StyleHub. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="productos.js"></script>
+    <script>
+        // Detectar categoría desde la URL
+        function getCategoriaFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('cat') || 'Mujer';
+        }
+
+        // Renderizar productos
+        function renderProductos(productosFiltrados) {
+            const contenedor = document.getElementById('productos-categoria');
+            contenedor.innerHTML = '';
+            if (productosFiltrados.length === 0) {
+                contenedor.innerHTML = '<p>No hay productos que coincidan con los filtros.</p>';
+                return;
+            }
+            productosFiltrados.forEach(prod => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <div class="product-image">
+                        <img src="${prod.imagen}" alt="${prod.nombre}">
+                    </div>
+                    <div class="product-info">
+                        <h3>${prod.nombre}</h3>
+                        <p class="price">€${prod.precio.toFixed(2)}</p>
+                        <p style="font-size:0.95em; color:#666;">Color: ${prod.color} | Talla: ${prod.talla}</p>
+                        <button class="add-to-cart">Añadir al Carrito</button>
+                    </div>
+                `;
+                contenedor.appendChild(card);
+            });
+        }
+
+        // Filtrar productos según los filtros del formulario
+        function filtrarProductos(productos, filtros) {
+            return productos.filter(p => {
+                if (filtros.precioMin && p.precio < filtros.precioMin) return false;
+                if (filtros.precioMax && p.precio > filtros.precioMax) return false;
+                if (filtros.color && p.color !== filtros.color) return false;
+                if (filtros.talla && p.talla !== filtros.talla) return false;
+                return true;
+            });
+        }
+
+        // Inicializar página
+        function initCategoria() {
+            const categoria = getCategoriaFromURL();
+            document.getElementById('titulo-categoria').textContent = categoria;
+            const productosCat = productos.filter(p => p.categoria.toLowerCase() === categoria.toLowerCase());
+            renderProductos(productosCat);
+
+            // Filtros
+            const form = document.getElementById('filtros-categoria');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const filtros = {
+                    precioMin: parseFloat(document.getElementById('precio-min').value) || null,
+                    precioMax: parseFloat(document.getElementById('precio-max').value) || null,
+                    color: document.getElementById('color').value,
+                    talla: document.getElementById('talla').value
+                };
+                const filtrados = filtrarProductos(productosCat, filtros);
+                renderProductos(filtrados);
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', initCategoria);
+
+        // Menú hamburguesa (reutilizado)
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open', navMenu.classList.contains('active'));
+        });
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            });
+        });
+    </script>
+</body>
+</html> 
