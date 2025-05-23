@@ -14,17 +14,24 @@
             <div class="logo">
                 <h1>StyleHub</h1>
             </div>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#coleccion">Colección</a></li>
-                <li><a href="#categorias">Categorías</a></li>
-                <li><a href="#ofertas">Ofertas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-            <div class="nav-icons">
-                <a href="#buscar"><i class="fas fa-search"></i></a>
-                <a href="#carrito"><i class="fas fa-shopping-cart"></i></a>
-                <a href="#usuario"><i class="fas fa-user"></i></a>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#coleccion">Colección</a></li>
+                    <li><a href="#categorias">Categorías</a></li>
+                    <li><a href="#ofertas">Ofertas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="#buscar"><i class="fas fa-search"></i></a>
+                    <a href="#carrito"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="#usuario"><i class="fas fa-user"></i></a>
+                </div>
             </div>
         </nav>
     </header>
@@ -173,5 +180,22 @@
             <p>&copy; 2024 StyleHub. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Cerrar el menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html> 
