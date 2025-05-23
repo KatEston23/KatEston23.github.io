@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Presentación</title>
+    <title>StyleHub - Tu Tienda de Moda</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -11,55 +11,167 @@
 <body>
     <header>
         <nav>
+            <div class="logo">
+                <h1>StyleHub</h1>
+            </div>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#coleccion">Colección</a></li>
+                <li><a href="#categorias">Categorías</a></li>
+                <li><a href="#ofertas">Ofertas</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
+            <div class="nav-icons">
+                <a href="#buscar"><i class="fas fa-search"></i></a>
+                <a href="#carrito"><i class="fas fa-shopping-cart"></i></a>
+                <a href="#usuario"><i class="fas fa-user"></i></a>
+            </div>
         </nav>
     </header>
 
     <main>
         <section id="inicio" class="hero">
-            <h1>Bienvenido a Mi Presentación</h1>
-            <p>Una muestra de mi trabajo y experiencia</p>
-        </section>
-
-        <section id="sobre-mi">
-            <h2>Sobre Mí</h2>
-            <div class="content">
-                <p>Aquí puedes agregar información sobre ti y tu experiencia.</p>
+            <div class="hero-content">
+                <h1>Descubre tu Estilo</h1>
+                <p>Las últimas tendencias en moda a tu alcance</p>
+                <a href="#coleccion" class="cta-button">Ver Colección</a>
             </div>
         </section>
 
-        <section id="proyectos">
-            <h2>Mis Proyectos</h2>
-            <div class="projects-grid">
-                <!-- Aquí puedes agregar tus proyectos -->
-                <div class="project-card">
-                    <h3>Proyecto 1</h3>
-                    <p>Descripción del proyecto 1</p>
+        <section id="categorias">
+            <h2>Categorías Destacadas</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <img src="https://via.placeholder.com/300x400" alt="Mujer">
+                    <h3>Mujer</h3>
                 </div>
-                <div class="project-card">
-                    <h3>Proyecto 2</h3>
-                    <p>Descripción del proyecto 2</p>
+                <div class="category-card">
+                    <img src="https://via.placeholder.com/300x400" alt="Hombre">
+                    <h3>Hombre</h3>
+                </div>
+                <div class="category-card">
+                    <img src="https://via.placeholder.com/300x400" alt="Accesorios">
+                    <h3>Accesorios</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="coleccion">
+            <h2>Nueva Colección</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x400" alt="Producto 1">
+                        <div class="product-overlay">
+                            <button class="quick-view">Vista Rápida</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Vestido Floral</h3>
+                        <p class="price">€49.99</p>
+                        <button class="add-to-cart">Añadir al Carrito</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x400" alt="Producto 2">
+                        <div class="product-overlay">
+                            <button class="quick-view">Vista Rápida</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Camisa Casual</h3>
+                        <p class="price">€29.99</p>
+                        <button class="add-to-cart">Añadir al Carrito</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/300x400" alt="Producto 3">
+                        <div class="product-overlay">
+                            <button class="quick-view">Vista Rápida</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Pantalón Vaquero</h3>
+                        <p class="price">€39.99</p>
+                        <button class="add-to-cart">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ofertas" class="offers">
+            <h2>Ofertas Especiales</h2>
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <h3>Hasta 50% OFF</h3>
+                    <p>En toda la colección de verano</p>
+                    <a href="#coleccion" class="cta-button">Comprar Ahora</a>
+                </div>
+                <div class="offer-card">
+                    <h3>Envío Gratis</h3>
+                    <p>En pedidos superiores a 50€</p>
+                    <a href="#coleccion" class="cta-button">Ver Más</a>
                 </div>
             </div>
         </section>
 
         <section id="contacto">
             <h2>Contacto</h2>
-            <div class="contact-info">
-                <a href="mailto:tu@email.com"><i class="fas fa-envelope"></i> Email</a>
-                <a href="https://linkedin.com/in/tu-perfil"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/tu-usuario"><i class="fab fa-github"></i> GitHub</a>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+34 900 123 456</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@stylehub.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Calle de la Moda, 123<br>Madrid, España</p>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Tu Nombre. Todos los derechos reservados.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>StyleHub</h3>
+                <p>Tu destino de moda online</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#coleccion">Colección</a></li>
+                    <li><a href="#categorias">Categorías</a></li>
+                    <li><a href="#ofertas">Ofertas</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Ayuda</h3>
+                <ul>
+                    <li><a href="#">Envíos</a></li>
+                    <li><a href="#">Devoluciones</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 StyleHub. Todos los derechos reservados.</p>
+        </div>
     </footer>
 </body>
 </html> 
