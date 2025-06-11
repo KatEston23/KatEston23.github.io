@@ -4,52 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zelton Studios</title>
-    <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Zelton Studios</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark minimal-navbar">
+        <div class="container-fluid px-3">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <img src="Recursos/LOGO VETTRA STUDIOS.png" alt="Logo Vettra Studios" style="height:32px;width:auto;object-fit:contain;">
+                <span class="brand-text">VETTRA STUDIOS</span>
+            </a>
+            <ul class="navbar-nav fases-navbar flex-grow-1 justify-content-center minimal-fases-navbar">
+                <li class="nav-item">
+                    <a class="nav-link" href="fase1.html">ANÁLISIS Y BÚSQUEDA DE INFORMACIÓN</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="fase2.html">DISEÑO Y PLANIFICACIÓN DEL PROYECTO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="fase3.html">METODOLOGÍA Y EJECUCIÓN DEL PROYECTO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="fase4.html">EVALUACIÓN</a>
+                </li>
+            </ul>
+            <button class="btn btn-hamburguesa" id="openMenuBtn" aria-label="Abrir menú" type="button">
+                <span class="hamburguesa-icon">&#9776;</span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav fases-navbar flex-grow-1 justify-content-center">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Fase 1</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Fase 2</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Fase 3</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Fase 4</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            Menú
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">Opción 1</a></li>
-                            <li><a class="dropdown-item" href="#">Opción 2</a></li>
-                            <li><a class="dropdown-item" href="#">Opción 3</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#contactoModal">Contacto</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
         </div>
     </nav>
 
-    <div class="container mt-5 text-center">
-        <h1 class="display-1">Proyecto</h1>
-        <h2 class="display-2">Zelton Studios</h2>
+    <!-- Overlay menú acordeón -->
+    <div id="menuOverlay" class="menu-overlay">
+        <div class="menu-overlay-content">
+            <button class="close-overlay" id="closeMenuBtn" aria-label="Cerrar menú">&times;</button>
+            <div class="acordeon-fases">
+                <div class="fase-item">
+                    <button class="fase-btn" type="button">Fase 1: ANÁLISIS Y BÚSQUEDA DE INFORMACIÓN</button>
+                    <div class="subfases-list">
+                        <a class="dropdown-item" href="fase1.html#t1">Contextualización de la situación económica mundial</a>
+                        <a class="dropdown-item" href="fase1.html#t2">Contextualización de la situación económica europea y nacional</a>
+                        <a class="dropdown-item" href="fase1.html#t3">Estudio del sector de mi actividad: análisis factores PESTEL</a>
+                        <a class="dropdown-item" href="fase1.html#t4">Clasificación de las empresas del sector</a>
+                        <a class="dropdown-item" href="fase1.html#t5">Detección de las necesidades más demandadas (DAFO y CAME)</a>
+                        <a class="dropdown-item" href="fase1.html#t6">Características específicas requeridas para el proyecto</a>
+                    </div>
+                </div>
+                <div class="fase-item">
+                    <button class="fase-btn" type="button">Fase 2: DISEÑO Y PLANIFICACIÓN DEL PROYECTO</button>
+                    <div class="subfases-list">
+                        <a class="dropdown-item" href="fase2.html#t1">Justificación de nuestro Proyecto</a>
+                        <a class="dropdown-item" href="fase2.html#t2">Diseño y planificación</a>
+                        <a class="dropdown-item" href="fase2.html#t3">Documentación necesaria para el desarrollo de las actividades</a>
+                        <a class="dropdown-item" href="fase2.html#t4">Aspectos a controlar para garantizar la calidad del Proyecto</a>
+                    </div>
+                </div>
+                <div class="fase-item">
+                    <button class="fase-btn" type="button">Fase 3: METODOLOGÍA Y EJECUCIÓN DEL PROYECTO</button>
+                    <div class="subfases-list">
+                        <a class="dropdown-item" href="fase3.html#t1">METODOLOGÍA</a>
+                        <a class="dropdown-item" href="fase3.html#t2">PRE DIAGRAMA DE GANTT</a>
+                        <a class="dropdown-item" href="fase3.html#t3">PRESUPUESTO ECONÓMICO DE TODAS LAS ACTIVIDADES</a>
+                        <a class="dropdown-item" href="fase3.html#t4">UBICACIÓN</a>
+                        <a class="dropdown-item" href="fase3.html#t5">DESTINATARIO</a>
+                    </div>
+                </div>
+                <div class="fase-item">
+                    <button class="fase-btn" type="button">Fase 4: EVALUACIÓN</button>
+                    <div class="subfases-list">
+                        <a class="dropdown-item" href="fase4.html#t1">Solución a los riesgos</a>
+                        <a class="dropdown-item" href="fase4.html#t2">Indicadores de calidad</a>
+                        <a class="dropdown-item" href="fase4.html#t3">Procedimiento en caso de desviación</a>
+                        <a class="dropdown-item" href="fase4.html#t4">Cuestionario de satisfacción</a>
+                        <a class="dropdown-item" href="fase4.html#t5">Cuestionario de satisfacción para que el cliente evalúe la CALIDAD del producto/servicio</a>
+                    </div>
+                </div>
+                <div class="fase-item">
+                    <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#contactoModal">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formas geométricas minimalistas -->
+    <svg class="bg-geo bg-geo-top-left" width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="40" cy="40" r="38" stroke="#e0b7c6" stroke-width="3" fill="none"/>
+      <rect x="100" y="20" width="60" height="10" rx="5" fill="#4B232A" fill-opacity="0.12"/>
+    </svg>
+    <svg class="bg-geo bg-geo-bottom-right" width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="140" cy="140" r="30" stroke="#4B232A" stroke-width="2" fill="none"/>
+      <rect x="20" y="150" width="80" height="8" rx="4" fill="#e0b7c6" fill-opacity="0.10"/>
+    </svg>
+    <div class="hero-container text-center">
+        <div class="logo-halo">
+            <img src="Recursos/LOGO VETTRA STUDIOS.png" alt="Logo Vettra Studios" class="hero-logo mb-4" />
+        </div>
+        <h1 class="display-1 hero-title">VETTRA</h1>
+        <h2 class="display-2 hero-subtitle">STUDIOS</h2>
+        <p class="hero-slogan">Minimalismo, autenticidad y respeto con el medioambiente: así es como vestimos el futuro.</p>
+        <a href="#" class="hero-btn">Descubre más</a>
     </div>
 
     <!-- Modal de Contacto -->
@@ -69,6 +122,191 @@
         </div>
     </div>
 
+    <!-- Modal Fase 1 -->
+    <div class="modal fade" id="fase1Modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">ANÁLISIS Y BÚSQUEDA DE INFORMACIÓN</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="card fase-card">
+                                <div class="card-body">
+                                    <h6 class="card-title">● Contextualización de la situación económica mundial</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card fase-card">
+                                <div class="card-body">
+                                    <h6 class="card-title">● Contextualización de la situación económica europea y nacional</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card fase-card">
+                                <div class="card-body">
+                                    <h6 class="card-title">● Estudio del sector de mi actividad: análisis factores PESTEL</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card fase-card">
+                                <div class="card-body">
+                                    <h6 class="card-title">● Clasificación de las empresas del sector (tabla tres empresas de la competencia con las siguientes columnas: localización, tamaño, producto o servicio, organigrama, facturación, tipo de clientes).</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card fase-card">
+                                <div class="card-body">
+                                    <h6 class="card-title">● Detección de las necesidades más demandadas en este tipo de empresas a través de un cuadro DAFO y la herramienta CAME.</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card fase-card">
+                                <div class="card-body">
+                                    <h6 class="card-title">● Características específicas requeridas para el proyecto (justificando que la IDEA de negocio da respuesta a las demandas que hemos sacado del DAFO).</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Fase 2 -->
+    <div class="modal fade" id="fase2Modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">DISEÑO Y PLANIFICACIÓN DEL PROYECTO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Contenido de la fase: DISEÑO Y PLANIFICACIÓN DEL PROYECTO.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Fase 3 -->
+    <div class="modal fade" id="fase3Modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">METODOLOGÍA Y EJECUCIÓN DEL PROYECTO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Contenido de la fase: METODOLOGÍA Y EJECUCIÓN DEL PROYECTO.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Fase 4 -->
+    <div class="modal fade" id="fase4Modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">EVALUACIÓN</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Contenido de la fase: EVALUACIÓN.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Animación minimalista para portada
+      window.addEventListener('DOMContentLoaded', () => {
+        const logo = document.querySelector('.hero-logo');
+        const title = document.querySelector('.hero-title');
+        const subtitle = document.querySelector('.hero-subtitle');
+        const slogan = document.querySelector('.hero-slogan');
+        const btn = document.querySelector('.hero-btn');
+        logo.style.opacity = 0;
+        title.style.opacity = 0;
+        subtitle.style.opacity = 0;
+        slogan.style.opacity = 0;
+        slogan.style.transform = 'translateY(30px)';
+        btn.style.opacity = 0;
+        btn.style.transform = 'translateY(30px)';
+        logo.style.transform = 'translateY(40px)';
+        title.style.transform = 'translateY(40px)';
+        subtitle.style.transform = 'translateY(40px)';
+        setTimeout(() => {
+          logo.style.transition = 'all 1s cubic-bezier(.77,0,.18,1)';
+          logo.style.opacity = 1;
+          logo.style.transform = 'translateY(0)';
+        }, 200);
+        setTimeout(() => {
+          title.style.transition = 'all 1s cubic-bezier(.77,0,.18,1)';
+          title.style.opacity = 1;
+          title.style.transform = 'translateY(0)';
+        }, 600);
+        setTimeout(() => {
+          subtitle.style.transition = 'all 1s cubic-bezier(.77,0,.18,1)';
+          subtitle.style.opacity = 1;
+          subtitle.style.transform = 'translateY(0)';
+        }, 1000);
+        setTimeout(() => {
+          slogan.style.transition = 'all 1.1s cubic-bezier(.77,0,.18,1)';
+          slogan.style.opacity = 1;
+          slogan.style.transform = 'translateY(0)';
+        }, 1300);
+        setTimeout(() => {
+          btn.style.transition = 'all 1.1s cubic-bezier(.77,0,.18,1)';
+          btn.style.opacity = 1;
+          btn.style.transform = 'translateY(0)';
+        }, 1700);
+      });
+
+      // Script acordeón de fases
+      document.querySelectorAll('.acordeon-fases .fase-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          const allLists = document.querySelectorAll('.acordeon-fases .subfases-list');
+          const thisList = btn.nextElementSibling;
+          allLists.forEach(function(list) {
+            if (list !== thisList) {
+              list.style.maxHeight = null;
+              list.classList.remove('open');
+            }
+          });
+          if (thisList.classList.contains('open')) {
+            thisList.style.maxHeight = null;
+            thisList.classList.remove('open');
+          } else {
+            thisList.style.maxHeight = thisList.scrollHeight + 'px';
+            thisList.classList.add('open');
+          }
+        });
+      });
+
+      // Script overlay menú hamburguesa
+      const openMenuBtn = document.getElementById('openMenuBtn');
+      const closeMenuBtn = document.getElementById('closeMenuBtn');
+      const menuOverlay = document.getElementById('menuOverlay');
+      openMenuBtn.addEventListener('click', function() {
+        menuOverlay.classList.add('show');
+        document.body.style.overflow = 'hidden';
+      });
+      closeMenuBtn.addEventListener('click', function() {
+        menuOverlay.classList.remove('show');
+        document.body.style.overflow = '';
+      });
+      menuOverlay.addEventListener('click', function(e) {
+        if (e.target === menuOverlay) {
+          menuOverlay.classList.remove('show');
+          document.body.style.overflow = '';
+        }
+      });
+    </script>
 </body>
 </html> 
