@@ -574,4 +574,59 @@ body {
     right: 0.7rem;
     font-size: 2rem;
   }
+}
+
+/* Estilos para el modal de contacto */
+.contact-info {
+    padding: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+}
+
+.contact-item:hover {
+    background-color: rgba(0,0,0,0.02);
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: #4B232A;
+    width: 2rem;
+    text-align: center;
+}
+
+.contact-item h6 {
+    margin: 0;
+    color: #4B232A;
+    font-weight: 600;
+}
+
+.contact-item p {
+    margin: 0.25rem 0 0;
+    color: #666;
+}
+
+.contact-item a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #4B232A;
+}
+
+.text-muted {
+    color: #888 !important;
+    font-size: 0.9rem;
 } 
