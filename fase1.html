@@ -3,196 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fase 1 | Vettra Studios</title>
+    <title>Fase 1 - Análisis y Búsqueda de Información | Vettra Studios</title>
+    <link rel="icon" href="Recursos/LOGO VETTRA STUDIOS.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark minimal-navbar">
-        <div class="container-fluid px-3">
-            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                <img src="Recursos/LOGO VETTRA STUDIOS.png" alt="Logo Vettra Studios" style="height:32px;width:auto;object-fit:contain;">
-                <span class="brand-text">VETTRA STUDIOS</span>
-            </a>
-            <ul class="navbar-nav fases-navbar flex-grow-1 justify-content-center minimal-fases-navbar">
-                <li class="nav-item">
-                    <a class="nav-link active" href="fase1.html">ANÁLISIS Y BÚSQUEDA DE INFORMACIÓN</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="fase2.html">DISEÑO Y PLANIFICACIÓN DEL PROYECTO</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="fase3.html">METODOLOGÍA Y EJECUCIÓN DEL PROYECTO</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="fase4.html">EVALUACIÓN</a>
-                </li>
-            </ul>
-            <button class="btn btn-hamburguesa" id="openMenuBtn" aria-label="Abrir menú" type="button">
-                <span class="hamburguesa-icon">&#9776;</span>
-            </button>
+    <div class="container py-4">
+        <div class="text-center mb-4">
+            <img src="Recursos/LOGO VETTRA STUDIOS.png" alt="Logo Vettra Studios" style="height:60px;width:auto;object-fit:contain;">
+            <h1 class="mt-3" style="font-weight:700;color:#4B232A;">Fase 1: Análisis y Búsqueda de Información</h1>
         </div>
-    </nav>
-    <!-- Overlay menú acordeón -->
-    <div id="menuOverlay" class="menu-overlay">
-        <div class="menu-overlay-content">
-            <button class="close-overlay" id="closeMenuBtn" aria-label="Cerrar menú">&times;</button>
-            <div class="acordeon-fases">
-                <div class="fase-item">
-                    <button class="fase-btn" type="button">Fase 1: ANÁLISIS Y BÚSQUEDA DE INFORMACIÓN</button>
-                    <div class="subfases-list">
-                        <a class="dropdown-item" href="fase1.html#t1">Contextualización de la situación económica mundial</a>
-                        <a class="dropdown-item" href="fase1.html#t2">Contextualización de la situación económica europea y nacional</a>
-                        <a class="dropdown-item" href="fase1.html#t3">Estudio del sector de mi actividad: análisis factores PESTEL</a>
-                        <a class="dropdown-item" href="fase1.html#t4">Clasificación de las empresas del sector</a>
-                        <a class="dropdown-item" href="fase1.html#t5">Detección de las necesidades más demandadas (DAFO y CAME)</a>
-                        <a class="dropdown-item" href="fase1.html#t6">Características específicas requeridas para el proyecto</a>
-                    </div>
-                </div>
-                <div class="fase-item">
-                    <button class="fase-btn" type="button">Fase 2: DISEÑO Y PLANIFICACIÓN DEL PROYECTO</button>
-                    <div class="subfases-list">
-                        <a class="dropdown-item" href="fase2.html#t1">Justificación de nuestro Proyecto</a>
-                        <a class="dropdown-item" href="fase2.html#t2">Diseño y planificación</a>
-                        <a class="dropdown-item" href="fase2.html#t3">Documentación necesaria para el desarrollo de las actividades</a>
-                        <a class="dropdown-item" href="fase2.html#t4">Aspectos a controlar para garantizar la calidad del Proyecto</a>
-                    </div>
-                </div>
-                <div class="fase-item">
-                    <button class="fase-btn" type="button">Fase 3: METODOLOGÍA Y EJECUCIÓN DEL PROYECTO</button>
-                    <div class="subfases-list">
-                        <a class="dropdown-item" href="fase3.html#t1">METODOLOGÍA</a>
-                        <a class="dropdown-item" href="fase3.html#t2">PRE DIAGRAMA DE GANTT</a>
-                        <a class="dropdown-item" href="fase3.html#t3">PRESUPUESTO ECONÓMICO DE TODAS LAS ACTIVIDADES</a>
-                        <a class="dropdown-item" href="fase3.html#t4">UBICACIÓN</a>
-                        <a class="dropdown-item" href="fase3.html#t5">DESTINATARIO</a>
-                    </div>
-                </div>
-                <div class="fase-item">
-                    <button class="fase-btn" type="button">Fase 4: EVALUACIÓN</button>
-                    <div class="subfases-list">
-                        <a class="dropdown-item" href="fase4.html#t1">Solución a los riesgos</a>
-                        <a class="dropdown-item" href="fase4.html#t2">Indicadores de calidad</a>
-                        <a class="dropdown-item" href="fase4.html#t3">Procedimiento en caso de desviación</a>
-                        <a class="dropdown-item" href="fase4.html#t4">Cuestionario de satisfacción</a>
-                        <a class="dropdown-item" href="fase4.html#t5">Cuestionario de satisfacción para que el cliente evalúe la CALIDAD del producto/servicio</a>
-                    </div>
-                </div>
-                <div class="fase-item">
-                    <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#contactoModal">Contacto</a>
-                </div>
-            </div>
+        <div class="pdf-viewer-container" style="box-shadow:0 4px 32px rgba(75,35,42,0.10);border-radius:18px;overflow:hidden;background:#fff;">
+            <iframe src="Fases/ANALISIS Y BUSQUEDA DE INFORMACIÓN.pdf" width="100%" height="800px" style="border:none;min-height:60vh;" allowfullscreen></iframe>
         </div>
     </div>
-    <div class="container py-5">
-        <h2 class="mb-4 text-center" style="color: var(--granate); font-weight: 700; letter-spacing: 0.04em;">ANÁLISIS Y BÚSQUEDA DE INFORMACIÓN</h2>
-        <div class="row g-4 justify-content-center">
-            <div class="col-md-6 col-lg-4">
-                <div class="card fase-card">
-                    <img src="Recursos/Contextualización de la situación económica mundial.jpg" class="card-img-top img-fase img-fase-grande" alt="Contextualización de la situación económica mundial">
-                    <div class="card-body">
-                        <h6 class="card-title">● Contextualización de la situación económica mundial</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card fase-card">
-                    <img src="Recursos/Contextualización de la situación económica europea y nacional.jpg" class="card-img-top img-fase img-fase-grande" alt="Contextualización de la situación económica europea y nacional">
-                    <div class="card-body">
-                        <h6 class="card-title">● Contextualización de la situación económica europea y nacional</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card fase-card">
-                    <img src="Recursos/Estudio del sector análisis PESTEL.png" class="card-img-top img-fase img-fase-grande" alt="Estudio del sector análisis PESTEL">
-                    <div class="card-body">
-                        <h6 class="card-title">● Estudio del sector de mi actividad: análisis factores PESTEL</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card fase-card">
-                    <img src="Recursos/Clasificación de empresas competidoras (tabla comparativa).jpeg" class="card-img-top img-fase" alt="Clasificación de empresas competidoras">
-                    <div class="card-body">
-                        <h6 class="card-title">● Clasificación de las empresas del sector (tabla tres empresas de la competencia con las siguientes columnas: localización, tamaño, producto o servicio, organigrama, facturación, tipo de clientes).</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card fase-card">
-                    <img src="Recursos/Matriz DAFO con colores o flechas de estrategia CAME.png" class="card-img-top img-fase" alt="Matriz DAFO CAME">
-                    <div class="card-body">
-                        <h6 class="card-title">● Detección de las necesidades más demandadas en este tipo de empresas a través de un cuadro DAFO y la herramienta CAME.</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card fase-card">
-                    <img src="Recursos/Características del proyecto (justificación de la idea).png" class="card-img-top img-fase" alt="Características del proyecto">
-                    <div class="card-body">
-                        <h6 class="card-title">● Características específicas requeridas para el proyecto (justificando que la IDEA de negocio da respuesta a las demandas que hemos sacado del DAFO).</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal de Contacto (opcional, igual que en index.html) -->
-    <div class="modal fade" id="contactoModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Información de Contacto</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <p><strong>Nombre:</strong> Jacobo Ruiz Gomez</p>
-                    <p><strong>Curso:</strong> 2 GAE</p>
-                    <p><strong>Fecha:</strong> 10/06/2025</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-    // Script acordeón de fases
-      document.querySelectorAll('.acordeon-fases .fase-btn').forEach(function(btn) {
-        btn.addEventListener('click', function() {
-          const allLists = document.querySelectorAll('.acordeon-fases .subfases-list');
-          const thisList = btn.nextElementSibling;
-          allLists.forEach(function(list) {
-            if (list !== thisList) {
-              list.style.maxHeight = null;
-              list.classList.remove('open');
-            }
-          });
-          if (thisList.classList.contains('open')) {
-            thisList.style.maxHeight = null;
-            thisList.classList.remove('open');
-          } else {
-            thisList.style.maxHeight = thisList.scrollHeight + 'px';
-            thisList.classList.add('open');
-          }
-        });
-      });
-    // Script overlay menú hamburguesa
-      const openMenuBtn = document.getElementById('openMenuBtn');
-      const closeMenuBtn = document.getElementById('closeMenuBtn');
-      const menuOverlay = document.getElementById('menuOverlay');
-      openMenuBtn.addEventListener('click', function() {
-        menuOverlay.classList.add('show');
-        document.body.style.overflow = 'hidden';
-      });
-      closeMenuBtn.addEventListener('click', function() {
-        menuOverlay.classList.remove('show');
-        document.body.style.overflow = '';
-      });
-      menuOverlay.addEventListener('click', function(e) {
-        if (e.target === menuOverlay) {
-          menuOverlay.classList.remove('show');
-          document.body.style.overflow = '';
-        }
-      });
-    </script>
 </body>
 </html> 
